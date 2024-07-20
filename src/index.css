@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Verdana, Geneva, Tahoma, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  height: 100dvh;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  outline: none !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.truncate {
+  overflow: hidden;
+  box-orient: vertical;
+  display:-webkit-box;
+}
+
+#popup {
+  animation-name: Popup;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-delay: 0s;
+  opacity: 0.95;
+}
+
+@keyframes Popup{
+  0%{
+    z-index: 30;
+    opacity: 1;
+
+  }
+   50%{
+    z-index: 30;
+    opacity: 1;
+
+   }
+   75%{
+    z-index: 30;
+    opacity: 0;
+
+   }
+  100%{
+      display: none;
+      opacity: 0;
+      z-index: 0;
+  }
+}
+
+@keyframes Card{
+  0%{
+      opacity: 1;
+  }
+  50%{
+    opacity: 0;
+    height: 520px;
+  }  
+  75%{
+      opacity: 0;
+      height: 0px;
+  }
+  100%{
+      opacity: 0;
+      height: 0px;
+  }
+}
+
+@keyframes noteCard{
+  0%{
+      opacity: 1;
+  }
+  75%{
+      opacity: 0;
+      height: 100dvh;
+  }
+  100%{
+      opacity: 0;
+      height: 0px;
+  }
+}
+
+
+
+@keyframes Comment{
+  0%{
+      opacity: 1;
+  }
+  75%{
+      opacity: 0;
+      height: 60px;
+  }
+  100%{
+      opacity: 0;
+      height: 0px;
+      z-index: 0;
+  }
+}
+
+
+
+
